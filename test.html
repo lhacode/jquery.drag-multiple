@@ -1,0 +1,52 @@
+<html><head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Multi Drag Demo</title>
+  
+	<link href="libs/jquery-ui.css" type="text/css" rel="stylesheet">
+
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/jquery/jquery-ui.js"></script>
+	<script src="dist/jquery-ui.drag-multiple.js"></script>
+	<script>
+	$(window).load(function(){
+	jQuery(function($) {
+	  $('div.ui-draggable').draggable({multiple: true});
+	  
+	  $('div[class*="ui-draggable"]').click(function(){
+        $(this).addClass("ui-selected");
+    });
+	});
+	});
+	</script>
+  
+  <style type="text/css">
+    .ui-draggable {
+    position: absolute;
+    border: 1px solid #89B;
+    background: #BCE;
+    height: 58px;
+    width: 58px;
+    cursor: move;
+    top: 120px;
+    }
+.ui-selected {
+    background-color: #ECB;
+    border-color: #B98;
+    }
+  </style>
+
+
+</head>
+<body>
+  <h1>Multi Drag Demo</h1>
+<p>Click to select multiple boxes, and drag them around the screen.</p>
+<div style="left: 19px; top: 120px;" class="ui-draggable">Square 1</div>
+<div style="left: 129px; top: 74px;" class="ui-draggable"></div>
+<div style="left: 210px; top: -20px;" class="ui-draggable"></div>
+  
+
+
+
+
+
+</body></html>
